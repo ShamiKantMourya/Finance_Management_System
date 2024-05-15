@@ -1,0 +1,32 @@
+[
+  {
+    "description": "Emergency Fund",
+    "amount": 5000,
+    "category": "Emergency",
+    "date": "2023-01-15"
+  },
+  {
+    "description": "Vacation Fund",
+    "amount": 2000,
+    "category": "Vacation",
+    "date": "2023-03-20"
+  },
+  {
+    "description": "Long Term Savings",
+    "amount": 10000,
+    "category": "Long Term",
+    "date": "2023-05-10"
+  },
+  {
+    "description": "Medical Expenses",
+    "amount": 1500,
+    "category": "Medical",
+    "date": "2023-06-30"
+  },
+  {
+    "description": "Rainy Day Fund",
+    "amount": 3000,
+    "category": "Rainy Day",
+    "date": "2023-07-25"
+  }
+]

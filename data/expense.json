@@ -1,0 +1,32 @@
+[
+  {
+    "description": "Office Supplies Purchase",
+    "amount": 200,
+    "category": "Office Supplies",
+    "date": "2023-03-10"
+  },
+  {
+    "description": "Monthly Rent Payment",
+    "amount": 2500,
+    "category": "Rent",
+    "date": "2023-04-01"
+  },
+  {
+    "description": "Depreciation of Equipment",
+    "amount": 1000,
+    "category": "Depreciation",
+    "date": "2023-05-15"
+  },
+  {
+    "description": "Marketing Campaign Expenses",
+    "amount": 3000,
+    "category": "Marketing",
+    "date": "2023-06-05"
+  },
+  {
+    "description": "Employee Health Insurance Premiums",
+    "amount": 400,
+    "category": "Health Insurance",
+    "date": "2023-07-20"
+  }
+]

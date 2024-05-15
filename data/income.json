@@ -1,0 +1,32 @@
+[
+  {
+    "description": "Sale of Stocks",
+    "amount": 5000,
+    "category": "Capital Gain",
+    "date": "2023-03-15"
+  },
+  {
+    "description": "Real Estate Commission",
+    "amount": 2500,
+    "category": "Commission",
+    "date": "2023-05-20"
+  },
+  {
+    "description": "Quarterly Dividend Payment",
+    "amount": 800,
+    "category": "Dividend",
+    "date": "2023-04-10"
+  },
+  {
+    "description": "Employee Bonus",
+    "amount": 1000,
+    "category": "Gratuity",
+    "date": "2023-06-30"
+  },
+  {
+    "description": "Rental Income from Property",
+    "amount": 1200,
+    "category": "Rent",
+    "date": "2023-07-25"
+  }
+]
