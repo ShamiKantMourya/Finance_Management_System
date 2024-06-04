@@ -26,17 +26,10 @@ const seedIncomeDatabase = async () => {
 exports.getAllIncomes = async (req, res) => {
   try {
     const incomes = await Income.find({});
-    if (incomes) {
-      res.status(200).json({
-        success: true,
-        incomes: incomes,
-      });
-    } else {
-      res.status(404).json({
-        success: false,
-        message: "No incomes found",
-      });
-    }
+    res.status(200).json({
+      success: true,
+      incomes: incomes,
+    });
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -52,17 +45,10 @@ exports.addNewIncome = async (req, res) => {
     const newIncome = new Income(income);
     const savedIncome = await newIncome.save();
     console.log(savedIncome, "income added");
-    if (savedIncome) {
-      res.status(201).json({
-        success: true,
-        income: savedIncome,
-      });
-    } else {
-      res.status(404).json({
-        success: false,
-        message: "Failed to add income",
-      });
-    }
+    res.status(201).json({
+      success: true,
+      income: savedIncome,
+    });
   } catch (error) {
     res.status(500).json({
       success: false,

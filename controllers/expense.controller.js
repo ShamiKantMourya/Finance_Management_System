@@ -26,17 +26,10 @@ const seedExpenseDatabase = async () => {
 exports.getAllExpenses = async (req, res) => {
   try {
     const expenses = await Expense.find({});
-    if (expenses) {
       res.status(200).json({
         success: true,
         expenses: expenses,
       });
-    } else {
-      res.status(404).json({
-        success: false,
-        message: "No expenses found",
-      });
-    }
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -50,18 +43,11 @@ exports.addNewExpense = async (req, res) => {
   try {
     const expense = new Expense(req.body);
     const savedExpense = await expense.save();
-    console.log(savedExpense, "expense added");
-    if (savedExpense) {
+    // console.log(savedExpense, "expense added");
       res.status(201).json({
         success: true,
         expense: savedExpense,
       });
-    } else {
-      res.status(404).json({
-        success: false,
-        message: "Failed to add expense",
-      });
-    }
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -74,17 +60,10 @@ exports.addNewExpense = async (req, res) => {
 exports.sortExpensesByAmount = async (req, res) => {
   try {
     const sortedExpenses = await Expense.find({}).sort({ amount: -1 });
-    if (sortedExpenses) {
       res.status(200).json({
         success: true,
         expenses: sortedExpenses,
       });
-    } else {
-      res.status(404).json({
-        success: false,
-        message: "No expenses found",
-      });
-    }
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -98,17 +77,10 @@ exports.filterExpensesByCategory = async (req, res) => {
   try {
     const category = req.params.category;
     const filteredExpenses = await Expense.find({ category: category });
-    if (filteredExpenses) {
       res.status(200).json({
         success: true,
         expenses: filteredExpenses,
       });
-    } else {
-      res.status(404).json({
-        success: false,
-        message: "No expenses found",
-      });
-    }
   } catch (error) {
     res.status(500).json({
       success: false,

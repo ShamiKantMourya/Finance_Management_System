@@ -26,17 +26,10 @@ const seedSavingDatabase = async () => {
 exports.getAllSavings = async (req, res) => {
   try {
     const savings = await Saving.find({});
-    if (savings) {
-      res.status(200).json({
-        success: true,
-        savings: savings,
-      });
-    } else {
-      res.status(404).json({
-        success: false,
-        message: "No savings found",
-      });
-    }
+    res.status(200).json({
+      success: true,
+      savings: savings,
+    });
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -51,18 +44,11 @@ exports.addNewSaving = async (req, res) => {
     const saving = req.body;
     const newSaving = new Saving(saving);
     const savedSaving = await newSaving.save();
-    console.log(savedSaving, "saving added");
-    if (savedSaving) {
-      res.status(201).json({
-        success: true,
-        saving: savedSaving,
-      });
-    } else {
-      res.status(404).json({
-        success: false,
-        message: "Failed to add saving",
-      });
-    }
+    // console.log(savedSaving, "saving added");
+    res.status(201).json({
+      success: true,
+      saving: savedSaving,
+    });
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -75,17 +61,10 @@ exports.addNewSaving = async (req, res) => {
 exports.sortSavingsByAmount = async (req, res) => {
   try {
     const sortedSavings = await Saving.find({}).sort({ amount: -1 });
-    if (sortedSavings) {
-      res.status(200).json({
-        success: true,
-        savings: sortedSavings,
-      });
-    } else {
-      res.status(404).json({
-        success: false,
-        message: "No savings found",
-      });
-    }
+    res.status(200).json({
+      success: true,
+      savings: sortedSavings,
+    });
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -99,17 +78,10 @@ exports.filterSavingsByCategory = async (req, res) => {
   try {
     const category = req.params.category;
     const savings = await Saving.find({ category: category });
-    if (savings) {
-      res.status(200).json({
-        success: true,
-        savings: savings,
-      });
-    } else {
-      res.status(404).json({
-        success: false,
-        message: "No savings found",
-      });
-    }
+    res.status(200).json({
+      success: true,
+      savings: savings,
+    });
   } catch (error) {
     res.status(500).json({
       success: false,
